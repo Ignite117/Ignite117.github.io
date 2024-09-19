@@ -1,0 +1,97 @@
+header {
+    width: 100%;
+    height: 50px;
+    background-color: #e2e2ed;
+    padding: 5px 0;
+    margin: 0;
+}
+
+body {
+    background-color: #f4f0f8;
+}
+
+#logo {
+    max-width: 150px;
+    height: auto;
+    float: left;
+}
+
+h1 {
+    font-size: 24px;
+    display: inline-block;
+}
+
+/* Стили для меню навигации */
+nav {
+	display: inline-block;
+	max-width: 50%; 
+	background: #e2e2ed;
+	float: right;
+}
+
+nav a {
+    font-size: 24px;
+    display: inline;
+    margin: 8px;
+    padding: 0 8px 0 8px;
+    text-decoration: none;
+    color: #000;
+}
+
+/* Стили для таблицы */
+table {
+    width: 900px;
+    border-collapse: collapse;
+    background: blue;
+    margin-top: 20px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+form {
+    width: 900px;
+    background: #d7f8ff;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+form label,form >input,form div{
+    width: 150px;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+}
+
+.links {
+    width: 900px;
+    background: #d7f8ff;
+    margin-top: 20px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+thead {
+    background-color: #ffaeae;
+}
+
+tbody tr:nth-child(odd) {
+    background-color: #a9beff;
+}
+
+tbody tr:nth-child(even) {
+    background-color: #b0ffb0;
+}
+
+td, th {
+    border: 1px solid #ccc;
+    padding: 10px;
+    text-align: center;
+}
+
+/* Стили для подвала */
+footer {
+    width: 100%;
+    text-align: center;
+    background-color: #e2e2ed;;
+    padding: 10px 0;
+}
