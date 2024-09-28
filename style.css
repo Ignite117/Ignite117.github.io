@@ -9,7 +9,7 @@ header {
 body {
     background-color: #f4f0f8;
 }
-.bod{
+#bod{
     max-width:960px;
     background-color:rgba(176, 232, 238, 0.877);
     margin: 0 auto;
@@ -30,14 +30,14 @@ h1 {
     display: inline-block;
 }
 
-/* Стили для меню навигации */
+/* Стили для меню навигации /
 nav{
     background-color:rgba(123, 141, 255, 0.877);
     padding:10px;
     text-align: center;
     display: flex;
     flex-direction: column;
-  
+
   }
 
 nav a {
@@ -49,29 +49,14 @@ nav a {
     color: #000;
 }
 
-/* Стили для таблицы */
+/ Стили для таблицы /
 table {
     width: 70%;
     border-collapse: collapse;
-    background: blue;
-    margin-top: 20px;
-    margin-left: auto;
-    margin-right: auto;
+    margin: 0 auto;
 }
 
 form {
-    width: 70%;
-    background: #d7f8ff;
-    margin-left: auto;
-    margin-right: auto;
-}
-
-
-
-.links {
-    width: 70%;
-    background: #d7f8ff;
-    margin-top: 20px;
     margin-left: auto;
     margin-right: auto;
 }
@@ -94,7 +79,7 @@ td, th {
     text-align: center;
 }
 
-/* Стили для подвала */
+/ Стили для подвала */
 footer {
     width: 100%;
     text-align: center;
