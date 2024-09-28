@@ -11,7 +11,7 @@ body {
 }
 #bod{
     max-width:960px;
-    background-color:rgba(146, 153, 153, 0.877);
+    background-color:rgba(154, 255, 255, 0.877);
     margin: 0 auto;
     margin-top:20px;
     padding:10px;
@@ -32,7 +32,7 @@ h1 {
 
 /* Стили для меню навигации */
 nav{
-    background-color:rgba(123, 141, 255, 0.877);
+    background-color:rgba(164, 171, 171, 0.877);
     padding:10px;
     text-align: center;
     display: flex;
