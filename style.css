@@ -126,7 +126,7 @@ footer {
   #table{
     order: 1;
   }
-  #giper{
+  #links{
     order: 2;
   }
   #form{
@@ -135,6 +135,6 @@ footer {
 @media (min-width: 960px) {
   nav{flex-direction:row}
   #table{order: 2;}
-  #giper{order: 1;}
+  #links{order: 1;}
   #form{order: 3;}
   }
