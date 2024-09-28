@@ -54,9 +54,7 @@ table {
     width: 70%;
     border-collapse: collapse;
     background: blue;
-    margin-top: 20px;
-    margin-left: auto;
-    margin-right: auto;
+   margin: 0 auto;
 }
 
 form {
