@@ -19,13 +19,6 @@ body {
     flex-direction: column;
 
 }
-.links {
-    width: 900px;
-    background: #d7f8ff;
-    margin-top: 20px;
-    margin-left: auto;
-    margin-right: auto;
-}
 #logo {
     max-width: 150px;
     height: auto;
