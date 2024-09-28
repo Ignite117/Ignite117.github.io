@@ -8,9 +8,17 @@ header {
 
 body {
     background-color: #f4f0f8;
+}
+.bod{
+    max-width:960px;
+    background-color:rgba(176, 232, 238, 0.877);
+    margin: 0 auto;
+    margin-top:20px;
+    padding:10px;
+    display: flex;
+    flex-direction: column;
 
 }
-
 #logo {
     max-width: 150px;
     height: auto;
