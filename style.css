@@ -1,3 +1,16 @@
+.container-fluid{
+    width: 100%;
+    background-color: rgba(176, 232, 238, 0.877);
+}
+.container{
+    max-width: 960px;
+    margin: 0 auto;
+}
+.d-flex{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
 header {
     width: 100%;
     height: 50px;
@@ -95,3 +108,33 @@ footer {
     background-color: #e2e2ed;;
     padding: 10px 0;
 }
+ tr:hover td{
+    background-color: #B4FFF2;
+  }
+  #name{
+    text-align: center;
+  }
+  #name1{
+    text-align: center;
+  }
+  #name2{
+    text-align: center;
+  } 
+  #name3{
+    text-align: center;
+  }
+  #table{
+    order: 1;
+  }
+  #giper{
+    order: 2;
+  }
+  #form{
+    order: 3;
+  }
+@media (min-width: 960px) {
+  nav{flex-direction:row}
+  #table{order: 2;}
+  #giper{order: 1;}
+  #form{order: 3;}
+  }
