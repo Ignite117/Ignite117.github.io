@@ -51,7 +51,7 @@ nav a {
 
 /* Стили для таблицы */
 table {
-    width: 900px;
+    width: 70%;
     border-collapse: collapse;
     background: blue;
     margin-top: 20px;
@@ -60,7 +60,7 @@ table {
 }
 
 form {
-    width: 900px;
+    width: 70%;
     background: #d7f8ff;
     margin-left: auto;
     margin-right: auto;
