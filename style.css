@@ -1,17 +1,11 @@
 
-header {
-    width: 100%;
-    height: 50px;
-    background-color: #e2e2ed;
-    padding: 5px 0;
-    margin: 0;
-}
+.container-fluid{background-color:rgb(163, 163, 163);}
 .links{font-size: 20px;}
 body {
     background-color: #8000ff;
 }
 ul{
-    background-color: rgb(147, 255, 222);
+    background-color: #b7ffc8;
 }
 #logo {
     max-width: 150px;
@@ -24,13 +18,12 @@ h1 {
     display: inline-block;
 }
 
-/* Стили для таблицы*/
 table {
     background-color: #8000ff;
 }
 
 form {
-    background-color: #62ffc6;
+    background-color:#b7ffc8;
 }
 
 thead {
@@ -51,12 +44,8 @@ td, th {
     text-align: center;
 }
 
-/* Стили для подвала */
 footer {
-    width: 100%;
-    text-align: center;
-    background-color: #e2e2ed;;
-    padding: 10px 0;
+    background-color: #a0a0a0;;
 }
   #table{
     order: 1;
