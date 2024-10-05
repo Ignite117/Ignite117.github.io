@@ -1,3 +1,4 @@
+
 header {
     width: 100%;
     height: 50px;
@@ -5,19 +6,12 @@ header {
     padding: 5px 0;
     margin: 0;
 }
-
+.links{font-size: 20px;}
 body {
-    background-color: #f4f0f8;
+    background-color: #8000ff;
 }
-#bod{
-    max-width:960px;
-    background-color:rgba(154, 255, 255, 0.877);
-    margin: 0 auto;
-    margin-top:20px;
-    padding:10px;
-    display: flex;
-    flex-direction: column;
-
+ul{
+    background-color: rgb(147, 255, 222);
 }
 #logo {
     max-width: 150px;
@@ -30,35 +24,13 @@ h1 {
     display: inline-block;
 }
 
-/* Стили для меню навигации */
-nav{
-    background-color:rgba(164, 171, 171, 0.877);
-    padding:10px;
-    text-align: center;
-    display: flex;
-    flex-direction: column;
-
-  }
-
-nav a {
-    font-size: 24px;
-    display: inline;
-    margin: 8px;
-    padding: 0 8px 0 8px;
-    text-decoration: none;
-    color: #000;
-}
-
 /* Стили для таблицы*/
 table {
-    width: 70%;
-    border-collapse: collapse;
-    margin: 0 auto;
+    background-color: #8000ff;
 }
 
 form {
-    margin-left: auto;
-    margin-right: auto;
+    background-color: #62ffc6;
 }
 
 thead {
