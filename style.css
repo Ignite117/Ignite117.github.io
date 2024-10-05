@@ -1,9 +1,8 @@
-
-.container-fluid{background-color:rgb(163, 163, 163);}
-.links{font-size: 20px;}
 body {
     background-color: #8000ff;
 }
+.container-fluid{background-color:rgb(163, 163, 163);}
+.links{font-size: 20px;}
 ul{
     background-color: #b7ffc8;
 }
