@@ -1,40 +1,100 @@
-"use strict";
-function calculate(){
-let x=document.forms[0].price;
-    let y=document.forms[0].count;
-    let x0=document.forms[0].price0;
-    let y0=document.forms[0].count0;
-    let x1=document.forms[0].price1;
-    let y1=document.forms[0].count1;
-    let x11=document.forms[0].price11;
-    let y11=document.forms[0].count11;
-    let x2=document.forms[0].price2;
-    let y2=document.forms[0].count2;
-    let x22=document.forms[0].price22;
-    let y22=document.forms[0].count22;
-    let x3=document.forms[0].price3;
-    let y3=document.forms[0].count3;
-    let x33=document.forms[0].price33;
-    let y33=document.forms[0].count33;
-    let x4=document.forms[0].price4;
-    let y4=document.forms[0].count4;
-    let x44=document.forms[0].price44;
-    let y44=document.forms[0].count44;
-    let x5=document.forms[0].price5;
-    let y5=document.forms[0].count5;
-    let x55=document.forms[0].price55;
-    let y55=document.forms[0].count55;
-    let x6=document.forms[0].price6;
-    let y6=document.forms[0].count6;
-    let x66=document.forms[0].price66;
-    let y66=document.forms[0].count66;
-    let x7=document.forms[0].price7;
-    let y7=document.forms[0].count7;
-    let x77=document.forms[0].price77;
-    let y77=document.forms[0].count77;
-    let result=x.value*y.value+x1.value*y1.value+x2.value*y2.value+x3.value*y3.value+x4.value*y4.value+x5.value*y5.value+x6.value*y6.value+x7.value*y7.value+x0.value*y0.value+x11.value*y11.value+x22.value*y22.value+x33.value*y33.value+x44.value*y44.value+x55.value*y55.value+x66.value*y66.value+x77.value*y77.value;
-    let res=document.getElementById("result");
-    if(result<0)
-    {res.innerHTML="Введены неправильные данные";}
-    else{res.innerHTML="Стоимость: "+result+" рублей";}
+function updatePrice() {
+    let s = document.getElementsByName("type");
+    let select = s[0];
+    let price = 0;
+    let prices = {
+        types: [1200, 3000, 5000],
+        options: {
+            2: 500,
+        },
+        checkboxes: {
+            1: 250,
+            2: 300,
+            3: 450,
+        }
+    };
+    price = prices.types[select.value - 1];
+    let radioDiv = document.getElementById("radios");
+    radioDiv.style.display = (select.value == "2" ? "block" : "none");
+    let radios = document.getElementsByName("options");
+    radios.forEach(function(radio) {
+        if (radio.checked) {
+            let optionPrice = prices.options[radio.value];
+            if (optionPrice !== undefined) {
+                price += optionPrice;
+            }
+        }
+    });
+    let checkDiv = document.getElementById("checkboxes");
+    checkDiv.style.display = (select.value == "1" || select.value == "2" ? "none" : "block");
+    let checkboxes = document.querySelectorAll("#checkboxes input");
+    checkboxes.forEach(function(checkbox) {
+        if (checkbox.checked) {
+            let cPrice = prices.checkboxes[checkbox.name];
+            price += cPrice;
+        }
+    });
+    let count = document.getElementById("count").value;
+    if(parseInt(count) < 0) {
+        let Price = document.getElementById("price");
+        Price.innerHTML = "Данные введены неправильно";
+    }
+    else {
+        price *= count;
+        if(select.value != "2") 
+        {  
+            if(select.value == "1") {
+                price = prices.types[0] * count;
+            }
+        }
+        else if(price/count-prices.types[select.value - 1] == 250 || price/count-prices.types[select.value - 1] == 750) {
+            price -= 250 * count;
+            }
+            else if(price/count-prices.types[select.value - 1] == 300 || price/count-prices.types[select.value - 1] == 800) {
+                price -= 300 * count;
+            }
+            else if(price/count-prices.types[select.value - 1] == 450 || price/count-prices.types[select.value - 1] == 950) {
+                price -= 450 * count;
+            }
+            else if(price/count-prices.types[select.value - 1] == 550 || price/count-prices.types[select.value - 1] == 1050) {
+                price -= 550 * count;
+            }
+            else if(price/count-prices.types[select.value - 1] == 750 || price/count-prices.types[select.value - 1] == 1250) {
+                price -= 750 * count;
+            }
+            else if(price/count-prices.types[select.value - 1] == 700 || price/count-prices.types[select.value - 1] == 1200) {
+                price -= 700 * count;
+            }
+            else if(price/count-prices.types[select.value - 1] == 1000 || price/count-prices.types[select.value - 1] == 1500) {
+                price -= 1000 * count;
+            }
+        let Price = document.getElementById("price");
+        Price.innerHTML = price + " рублей";
+    }
 }
+window.addEventListener('DOMContentLoaded', function (event) {
+    let radioDiv = document.getElementById("radios");
+    radioDiv.style.display = "none";
+    let s = document.getElementsByName("type");
+    let select = s[0];
+    select.addEventListener("change", function(event) {
+        updatePrice();
+    });
+    let count = document.getElementById("count");
+    count.addEventListener("change", function(event) {
+        updatePrice();
+    });
+    let radios = document.getElementsByName("options");
+    radios.forEach(function(radio) {
+        radio.addEventListener("change", function(event) {
+            updatePrice();
+        });
+    });
+    let checkboxes = document.querySelectorAll("#checkboxes input");
+    checkboxes.forEach(function(checkbox) {
+        checkbox.addEventListener("change", function(event) {
+            updatePrice();
+        });
+    });
+    updatePrice();
+});
